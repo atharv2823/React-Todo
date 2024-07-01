@@ -1,7 +1,7 @@
 import "./Home.css"
 import send from "./send.png"
 import TodoCards from "./../../components/TodoCards/TodoCards"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import toast, {Toaster} from "react-hot-toast"
 
 function Home() {
