@@ -10,6 +10,10 @@ function Home() {
     const [todoList , setTodoList] = useState ([])
 
     const [newTask ,SetNewTask] = useState ("")
+
+    const [categories , Setcategories] = useState ("")
+
+
     return (
         <>
             <h1 className="app-title">Todo-App 📝</h1>
@@ -21,7 +25,7 @@ function Home() {
                     todoList.length === 0 ?
                     <p style={{textAlign: "center", fontSize:"20px"}}>
                     Todo List is empty
-                </p>
+                    </p>
                 :
                 null
                 }
@@ -39,7 +43,17 @@ function Home() {
                  onChange={(e)=>SetNewTask(e.target.value)}
                   />
 
+                <select className="select" 
+                value={categories}
+                onChange={(e)=>Setcategories(e.target.value)}
+                >
+                    <option value="categories">categories</option>
+                    <option value="Learning">Learning</option>
+                    <option value="Work">Work</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Health">Health</option>
 
+                </select>
 
                 <img 
                 src={send} 
